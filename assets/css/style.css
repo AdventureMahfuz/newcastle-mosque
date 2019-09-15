@@ -1,0 +1,309 @@
+/*
+=============================================================================
+>>>> color variable <<<<
+==============================================================================
+*/
+:root {
+    --primary-color: #DF0024;
+    --text-color: #4a4d4f;
+}
+
+/*
+=============================================================================
+DEFAULT STYLE START
+==============================================================================
+*/
+
+body {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+    letter-spacing: 0.3px;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/**
+================================================================================
+DEFAULT STYLE END
+================================================================================
+*/
+
+/**
+================================================================================
+COMMON STYLE START
+================================================================================
+*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+button:focus{
+    outline: none;
+}
+.section-padding {
+    padding: 30px 0;
+}
+
+/**
+================================================================================
+COMMON STYLE END
+================================================================================
+*/
+
+/**
+===================================================================================
+===============================  FRONT PAGE STYLE START  ==========================
+===================================================================================
+ */
+/**
+================================================================================
+Top Bar style start
+================================================================================
+*/
+section.topbar-section {
+    background: var(--primary-color);
+}
+
+.social-links ul li {
+    display: inline-block;
+}
+
+.social-links ul {
+    text-align: right;
+}
+
+.social-links ul li a {
+    display: block;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    margin: 2px;
+    color: var(--primary-color);
+    transition: all .5s;
+    transform: scale(1);
+}
+
+.social-links ul li a:hover {
+    transition: all .5s;
+    transform: scale(1.2);
+}
+
+.tl-content {
+}
+
+.tl-content p {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    margin-right: 10px;
+    color: #fff;
+    line-height: 30px;
+}
+
+.tl-content p i {
+    margin-right: 5px;
+}
+
+
+.main-navigation-section {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.logo h1 {
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    line-height: 65px;
+}
+.logo img {
+    width: 30%;
+}
+.navigation-menu ul {
+    text-align: right;
+}
+
+.navigation-menu ul li {
+    display: inline-block;
+}
+
+.navigation-menu ul li a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 25px 10px;
+    position: relative;
+    transition: all .5s;
+}
+
+
+.navigation-menu ul li a:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2px;
+    border-top: 2px solid #fff;
+    transition: all .5s;
+}
+.navigation-menu ul li.active a:before, .navigation-menu ul li a:hover:before {
+    width: 100%;
+    font-weight: bold;
+}
+/**
+================================================================================
+Top Bar style end
+================================================================================
+*/
+/**
+================================================================================
+hero section style start
+================================================================================
+*/
+.hero-section {
+}
+.single-hero-item{
+    height: 95vh;
+    overflow: hidden
+}
+.hero-background img{
+    width: 100%;
+    height: 95vh;
+}
+.hero-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.hero-content:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .6;
+    z-index: -1;
+}
+.d-table{
+    display: table;
+    height: 95vh;
+    width: 100%;
+}
+.d-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.hero-content h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+.hero-content h1 span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.hero-content button {
+    background: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f1f1f1;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-top: 30px;
+}
+.hero-slider button.owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.hero-slider button.owl-prev:focus, .hero-slider button.owl-next:focus {
+    outline: none;
+}
+
+.hero-slider button.owl-prev span, .hero-slider button.owl-next span {
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 24px;
+}
+
+.hero-slider button.owl-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+/**
+================================================================================
+hero section style end
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style start
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style end
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style start
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style end
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style start
+================================================================================
+*/
+/**
+================================================================================
+Top Bar style end
+================================================================================
+*/
+/**
+===================================================================================
+===============================  FRONT PAGE STYLE START  ==========================
+===================================================================================
+ */
