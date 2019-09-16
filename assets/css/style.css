@@ -4,8 +4,9 @@
 ==============================================================================
 */
 :root {
-    --primary-color: #DF0024;
+    --primary-color: #D73130;
     --text-color: #4a4d4f;
+    --bg-color: linear-gradient(to right, #002061 0%, #4DA3F9 100%);;
 }
 
 /*
@@ -16,9 +17,9 @@ DEFAULT STYLE START
 
 body {
     font-family: 'Hind Vadodara', sans-serif;
-    font-size: 1em;
+    font-size: 1.06em;
     line-height: 1.6em;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.03em;
     color: var(--text-color);
 }
 
@@ -43,26 +44,124 @@ ul {
     padding: 0;
 }
 
+a {
+    color: var(--text-color);
+}
+
 a:hover {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 a:focus {
     text-decoration: none;
     outline: none;
 }
-button:focus{
-    outline: none;
-}
-.section-padding {
-    padding: 30px 0;
+
+img {
+    width: 100%;
+    height: auto;
 }
 
+button:focus {
+    outline: none;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+i {
+    color: var(--primary-color);
+}
+
+.section-title h2 {
+    text-transform: uppercase;
+    font-size: 45px;
+    display: inline-block;
+    border-bottom: 2px solid var(--text-color);
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+button.theme-btn {
+    position: relative;
+    border: 1px solid var(--text-color);
+    text-align: center;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    background: initial;
+    z-index: 1;
+}
+
+button.theme-btn:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: all .5s;
+}
+
+button.theme-btn:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button.theme-btn:hover:after {
+    width: 100%;
+}
+.back_to_top i.fa {
+    position: fixed;
+    right: 25px;
+    bottom: 75px;
+    width: 35px;
+    height: 35px;
+    background: var(--bg-color);
+    text-align: center;
+    color: #fff;
+    line-height: 35px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 0 10px #999;
+    border-radius: 50%;
+    z-index: 9999;
+}
 /**
 ================================================================================
 COMMON STYLE END
 ================================================================================
 */
+
+
+/*
+=============================================================================
+scroll bar style for chrome
+==============================================================================
+*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+/*
+=============================================================================
+scroll bar style for chrome
+==============================================================================
+*/
+
 
 /**
 ===================================================================================
@@ -75,7 +174,7 @@ Top Bar style start
 ================================================================================
 */
 section.topbar-section {
-    background: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .social-links ul li {
@@ -121,12 +220,12 @@ section.topbar-section {
     margin-right: 5px;
 }
 
-
 .main-navigation-section {
     position: absolute;
     width: 100%;
     z-index: 10;
 }
+
 .logo h1 {
     text-transform: capitalize;
     font-weight: 300;
@@ -134,9 +233,11 @@ section.topbar-section {
     margin: 0;
     line-height: 65px;
 }
+
 .logo img {
     width: 30%;
 }
+
 .navigation-menu ul {
     text-align: right;
 }
@@ -155,7 +256,6 @@ section.topbar-section {
     transition: all .5s;
 }
 
-
 .navigation-menu ul li a:before {
     position: absolute;
     content: "";
@@ -166,10 +266,12 @@ section.topbar-section {
     border-top: 2px solid #fff;
     transition: all .5s;
 }
+
 .navigation-menu ul li.active a:before, .navigation-menu ul li a:hover:before {
     width: 100%;
     font-weight: bold;
 }
+
 /**
 ================================================================================
 Top Bar style end
@@ -182,15 +284,18 @@ hero section style start
 */
 .hero-section {
 }
-.single-hero-item{
+
+.single-hero-item {
     height: 95vh;
     overflow: hidden
 }
-.hero-background img{
+
+.hero-background img {
     width: 100%;
     height: 95vh;
 }
-.hero-content{
+
+.hero-content {
     position: absolute;
     left: 0;
     top: 0;
@@ -198,7 +303,8 @@ hero section style start
     height: 100%;
     z-index: 2;
 }
-.hero-content:after{
+
+.hero-content:after {
     position: absolute;
     content: "";
     left: 0;
@@ -206,41 +312,47 @@ hero section style start
     width: 100%;
     height: 100%;
     background: #000;
-    opacity: .6;
+    opacity: .7;
     z-index: -1;
 }
-.d-table{
+
+.d-table {
     display: table;
     height: 95vh;
     width: 100%;
 }
-.d-table-cell{
+
+.d-table-cell {
     display: table-cell;
     vertical-align: middle;
 }
+
 .hero-content h1 {
     color: #fff;
     font-weight: 400;
-    font-size: 55px;
-    text-transform: uppercase;
-    letter-spacing: 0;
+    font-size: 65px;
+    text-transform: capitalize;
 }
+
 .hero-content h1 span {
     color: var(--primary-color);
     font-weight: 700;
 }
 
 .hero-content button {
-    background: #fff;
+    background: var(--bg-color);
     border: none;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0 0 10px #f1f1f1;
-    color: var(--primary-color);
     cursor: pointer;
     margin-top: 30px;
 }
+
+.hero-content button i {
+    color: #fff;
+}
+
 .hero-slider button.owl-prev {
     position: absolute;
     top: 50%;
@@ -254,7 +366,7 @@ hero section style start
 .hero-slider button.owl-prev span, .hero-slider button.owl-next span {
     width: 30px;
     height: 30px;
-    background: var(--primary-color);
+    background: var(--bg-color);
     display: block;
     color: #fff;
     font-size: 30px;
@@ -267,39 +379,216 @@ hero section style start
     top: 50%;
     right: 0;
 }
+
 /**
 ================================================================================
 hero section style end
 ================================================================================
 */
+
 /**
 ================================================================================
-Top Bar style start
+service section style start
 ================================================================================
 */
+.single-service i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.single-service h4 {
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.single-service {
+    box-shadow: 0 0 5px #999;
+    padding: 40px 0;
+    border-radius: 10px;
+    transition: all .5s;
+    transform: scale(1);
+}
+
+.single-service:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.single-service p {
+    letter-spacing: 0;
+}
+
 /**
 ================================================================================
-Top Bar style end
+service section style end
 ================================================================================
 */
+
 /**
 ================================================================================
-Top Bar style start
+team section style start
 ================================================================================
 */
+section.our-team-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: -1;
+}
+
+.our-team-section .section-title h2 {
+    color: #ffffff;
+    border-color: #fff;
+}
+
+.member-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #999;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.member-info {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.member-info:before {
+    position: absolute;
+    content: "";
+    left: 40px;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.member-info h4 {
+    text-transform: capitalize;
+    font-size: 1em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.member-info p {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: .875em;
+}
+
+.team-members .owl-nav {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.team-members button.owl-prev:focus, .team-members button.owl-next:focus {
+    outline: none;
+}
+
+.team-members button.owl-prev span, .team-members button.owl-next span {
+    width: 30px;
+    height: 30px;
+    background: var(--bg-color);
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    line-height: 24px;
+    margin: 5px;
+}
+
 /**
 ================================================================================
-Top Bar style end
+team section style end
 ================================================================================
 */
+
 /**
 ================================================================================
-Top Bar style start
+footer style start
 ================================================================================
 */
+footer {
+    background: var(--bg-color);
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+.widget-title h3 {
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+}
+
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-widget {
+    font-size: 0.875em;
+}
+
+.footer-widget .social-links ul {
+    text-align: center;
+}
+
+.footer-widget ul li a i {
+    margin-right: 10px;
+}
+
+.footer-widget .social-links ul li a i {
+    margin-right: initial;
+}
+
+section.footer-bottom-section {
+    border-top: 1px solid #ddd;
+}
+
+section.footer-bottom-section p {
+    margin: 0;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+section.footer-bottom-section p a {
+    color: #fff;
+    font-weight: 700;
+}
+
 /**
 ================================================================================
-Top Bar style end
+footer style end
 ================================================================================
 */
 /**
