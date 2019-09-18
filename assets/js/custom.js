@@ -60,6 +60,7 @@ $(document).ready(function(){
         loop:true,
         margin:30,
         autoplay: true,
+        autoplayHoverPause:true,
         responsiveClass:true,
         nav:true,
         dots:false,
